@@ -5,14 +5,23 @@
  */
 package br.com.diagnosticit.services;
 
-import br.com.diagnosticit.model.Pet;
-import br.com.diagnosticit.model.Vet;
+import br.com.diagnosticit.model.Owner;
 import java.util.Set;
 
 /**
  *
  * @author cristiano
  */
-public interface VetService extends CrudService<Vet, Long>{
-            
+public interface CrudService <T, ID>{
+    
+    Set<T> findAll();
+    
+    T findById(ID id);
+    
+    T save(T ID);
+    
+    void delete(T object);
+    
+    void deleteById(ID id);
+    
 }
