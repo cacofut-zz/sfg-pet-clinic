@@ -12,7 +12,7 @@ import java.util.Set;
  *
  * @author cristiano
  */
-public interface OwnerService {
+public interface OwnerService{
    
     Owner findByLastName(String lastName);
     
