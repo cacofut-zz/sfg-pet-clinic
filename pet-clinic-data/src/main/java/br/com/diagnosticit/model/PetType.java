@@ -9,7 +9,7 @@ package br.com.diagnosticit.model;
  *
  * @author cristianoca
  */
-public class PetType {
+public class PetType extends BaseEntity{
     private String name;
 
     public PetType() {
