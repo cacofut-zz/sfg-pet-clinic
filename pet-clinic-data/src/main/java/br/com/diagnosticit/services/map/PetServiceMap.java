@@ -6,14 +6,16 @@
 package br.com.diagnosticit.services.map;
 
 import br.com.diagnosticit.model.Pet;
-import br.com.diagnosticit.services.CrudService;
+import br.com.diagnosticit.services.PetService;
 import java.util.Set;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author cristiano
  */
-public class PetServiceMap extends AbstractMapService<Pet, Long>  implements CrudService<Pet, Long>{
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long>  implements PetService{
     
     @Override
     public Set<Pet> findAll() {
