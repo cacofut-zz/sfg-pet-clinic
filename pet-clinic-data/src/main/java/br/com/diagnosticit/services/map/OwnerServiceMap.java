@@ -7,13 +7,16 @@ package br.com.diagnosticit.services.map;
 
 import br.com.diagnosticit.model.Owner;
 import br.com.diagnosticit.services.CrudService;
+import br.com.diagnosticit.services.OwnerService;
 import java.util.Set;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author cristiano
  */
-public class OwnerMapService extends AbstractMapService<Owner, Long>  implements CrudService<Owner, Long>{
+
+public class OwnerServiceMap extends AbstractMapService<Owner, Long>  implements OwnerService{
 
     @Override
     public Set<Owner> findAll() {
@@ -38,6 +41,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long>  implements
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 

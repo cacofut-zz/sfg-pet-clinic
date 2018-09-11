@@ -7,13 +7,16 @@ package br.com.diagnosticit.services.map;
 
 import br.com.diagnosticit.model.Vet;
 import br.com.diagnosticit.services.CrudService;
+import br.com.diagnosticit.services.VetService;
 import java.util.Set;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author cristiano
  */
-public class VetServiceMap extends AbstractMapService<Vet, Long>  implements CrudService<Vet, Long>{
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long>  implements VetService{
 
     @Override
     public Set<Vet> findAll() {
